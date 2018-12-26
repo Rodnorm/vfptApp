@@ -1,21 +1,43 @@
+// import React from 'react';
+// import { StyleSheet, Text, View } from 'react-native';
+// import { createStackNavigator, createAppContainer } from 'react-navigation';
+
+// import { ArticleList } from './components/ArticleList';
+// import { Articles } from './components/Article';
+
+
+
+
+// const Root = createStackNavigator({
+//   Article: Articles
+// });
+
+// const MainContainer = createAppContainer(Root);
+
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       <MainContainer />
+//     );
+//   }
+// }
+
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Articles } from './components/Article';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+
+const Root = createStackNavigator({
+  Login: Articles
+});
+
+const MainContainer = createAppContainer(Root);
 
 export default class App extends React.Component {
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+        <MainContainer />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
