@@ -1,89 +1,30 @@
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-
-// export default class Articles extends React.Component {
-  
-  
-//   static navigationOptions = {
-//     title: 'Login',
-//     headerStyle: {
-//       backgroundColor: '#8400d5',
-//     },
-//     headerTitleStyle: {
-//       color: '#f3f1e5',
-//     }
-//   };
-
-
-
-
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Text>Componente do artigo</Text>
-//       </View>
-//     );
-//   }
-// }
-
-
 import React from 'react';
-import { StyleSheet, TextInput, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { Header, Left, Right, Icon } from 'native-base';
 
 export default class Articles extends React.Component {
-    
-    static navigationOptions = {
-        title: 'Login',
-        headerStyle: {
-            backgroundColor: '#8400d5',    
-        },
-        headerTitleStyle: {
-            color: '#f3f1e5',
-        }
-    };
 
-    name = '';
+
 
     render() {
         return (
-            <View style={styles.container}>
-                <TextInput
-                    style={{ height: 40, color: '#f3f1e5'}}
-                    placeholder="Insira seu nome"
-                    onChangeText={(name) => {
-                        this.name = name;
-                    }}
-                />
-                <TouchableOpacity style={styles.button}>
-                    <Text style={{ color: '#f3f1e5', textAlign: "center" }}
-                        onPress={
-                            () => this.props.navigation.navigate('Main', { name: this.name })
-                        }
-                    >LOGIN</Text>
-                </TouchableOpacity>
+            <View style={{flex:1}}>
+                <Header style={styles.header}>
+                    <Right>
+                        <Icon name="menu" onPress={ ()=> this.props.navigation.openDrawer() }></Icon>
+                    </Right>
+                </Header>
+                <View style={{flex: 1, alignItems: "center", justifyContent:"center"}}>
+                    <Text>Home</Text>
+                </View>
             </View>
         );
     }
 }
 
+
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        backgroundColor: '#8400d5',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: 25,
-        paddingBottom: 10
-    },
-    button: {
-        backgroundColor: '#8b3cf9',
-        fontWeight: 'bold',
-        borderRadius: 10,
-        width: 150,
-        padding: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 20 },
-        shadowOpacity: 1
+    header: {
+        backgroundColor: '#fff'
     }
 });

@@ -1,43 +1,23 @@
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-// import { createStackNavigator, createAppContainer } from 'react-navigation';
-
-// import { ArticleList } from './components/ArticleList';
-// import { Articles } from './components/Article';
-
-
-
-
-// const Root = createStackNavigator({
-//   Article: Articles
-// });
-
-// const MainContainer = createAppContainer(Root);
-
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <MainContainer />
-//     );
-//   }
-// }
-
-
 import React from 'react';
-import { Articles } from './components/Article';
+import Articles from './components/Article';
+import ArticleList from './components/ArticleList';
+import { createDrawerNavigator } from 'react-navigation';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-const Root = createStackNavigator({
-  Login: Articles
+
+
+const AppDrawer = createDrawerNavigator({
+    Articles: Articles,
+    ArticleList: ArticleList
 });
 
-const MainContainer = createAppContainer(Root);
+const MainContainer = createAppContainer(AppDrawer);
 
 export default class App extends React.Component {
-  
-  render() {
-    return (
-        <MainContainer />
-    );
-  }
+
+    render() {
+        return (
+            <MainContainer />
+        );
+    }
 }
