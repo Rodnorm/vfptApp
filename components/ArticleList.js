@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, TextInput, Text, View, TouchableOpacity } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { Text, View } from 'react-native';
 
 
 export default class ArticleList extends React.Component {
@@ -12,6 +11,3 @@ export default class ArticleList extends React.Component {
         );
     }
 }
-const styles = StyleSheet.create({
-    
-});
