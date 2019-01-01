@@ -1,14 +1,13 @@
 import React from 'react';
-import Articles from './components/Article';
+import Article from './components/Article';
 import ArticleList from './components/ArticleList';
-import { createDrawerNavigator } from 'react-navigation';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 
 
 const AppDrawer = createDrawerNavigator({
-    Articles: Articles,
-    ArticleList: ArticleList
+    'Article List': ArticleList,
+    'Articles': Article
 });
 
 const MainContainer = createAppContainer(AppDrawer);
