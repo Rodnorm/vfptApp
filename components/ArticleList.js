@@ -21,14 +21,29 @@ const article = [
         description: 'blablablablablabla balbla bla bl b blablabla blablabla blablabla',
         id: 3
     },
+    {
+        name: 'Artigo 4',
+        description: 'blablablablablabla balbla bla bl b blablabla blablabla blablabla',
+        id: 4
+    },
+    {
+        name: 'Artigo 5',
+        description: 'blablablablablabla balbla bla bl b blablabla blablabla blablabla',
+        id: 5
+    },
+    {
+        name: 'Artigo 6',
+        description: 'blablablablablabla balbla bla bl b blablabla blablabla blablabla',
+        id: 6
+    },
 ];
 export default class ArticleList extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.background}>
                 <Menu action={this.props} />
-                <View>
+                <View sytle={{flex:1}}>
                     <ScrollView sytle={styles.scroll}>
 
                         {article.map(element => {
@@ -69,6 +84,11 @@ class List extends React.Component {
 
 const styles = StyleSheet.create({
     scroll: {
-        paddingTop: 10
+        paddingTop: 10,
+        flex:1
+    },
+    background: {
+        backgroundColor: '#b4ff85',
+        flex: 1
     }
 });

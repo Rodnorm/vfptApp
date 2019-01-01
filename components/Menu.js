@@ -22,6 +22,6 @@ export default class Menu extends React.Component {
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: '#fff'
+        backgroundColor: '#1ac182'
     }
 });
