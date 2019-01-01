@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, TextInput, Text, View, TouchableOpacity } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 
 
 export default class ArticleList extends React.Component {
@@ -11,3 +12,6 @@ export default class ArticleList extends React.Component {
         );
     }
 }
+const styles = StyleSheet.create({
+    
+});
