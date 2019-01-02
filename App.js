@@ -14,6 +14,7 @@ const AppDrawer = createDrawerNavigator(
         initialRouteName: 'Article List',
         contentOptions: {
             activeBackgroundColor: '#4076e0',
+            activeTintColor: 'white',
         }
     }
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Header, Right, Icon, Text } from 'native-base';
+import { Header, Right, Icon } from 'native-base';
 
 
 export default class Menu extends React.Component {
