@@ -109,7 +109,7 @@ export default class Articles extends React.Component {
             let article = this.props.navigation.getParam('id');
             return (
                 <View style={{ flex: 1 }}>
-                    <Menu action={this.props} />
+                    <Menu action={this.props} showArrow={true}/>
                     <View style={styles.view}>
                         <TextContent article={article} />
                     </View>
