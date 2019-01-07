@@ -1,14 +1,17 @@
 import React from 'react';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
+
 import Articles from './components/Article';
 import ArticleList from './components/ArticleList';
-import { createDrawerNavigator, createAppContainer } from 'react-navigation';
+import MainPlayer from './components/player/MainPlayer';
 
 
 
 const AppDrawer = createDrawerNavigator(
     {
         'Article List': ArticleList,
-        'Articles': Articles
+        'Articles': Articles,
+        'Player': MainPlayer, 
     },
     {
         initialRouteName: 'Article List',

@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import Menu from './Menu';
+import { View, ScrollView, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
 import { Card, CardItem, Text, Body } from "native-base";
+
+import Menu from './Menu';
 
 
 const article = [
@@ -36,20 +37,20 @@ const article = [
         description: 'blablablablablabla balbla bla bl b blablabla blablabla blablabla',
         id: 6
     },
-];
+]; 
 export default class ArticleList extends React.Component {
-
     render() {
         return (
             <View style={styles.background}>
+                <StatusBar hidden={true} />
                 <Menu action={this.props} />
-                <View sytle={{flex:1}}>
+                <View sytle={{ flex: 1 }}>
                     <ScrollView sytle={styles.scroll}>
 
                         {article.map(element => {
-                            return <TouchableOpacity key={element.id - 1 } onPress={
+                            return <TouchableOpacity key={element.id - 1} onPress={
                                 () => this.props.navigation.navigate('Articles', { id: element.id - 1 })
-                                    }>
+                            }>
                                 <List article={element} />
                             </TouchableOpacity>
                         })}
@@ -85,7 +86,7 @@ class List extends React.Component {
 const styles = StyleSheet.create({
     scroll: {
         paddingTop: 10,
-        flex:1
+        flex: 1
     },
     background: {
         backgroundColor: '#b4ff85',
