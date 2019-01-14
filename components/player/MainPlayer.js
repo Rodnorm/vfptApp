@@ -1,45 +1,5 @@
-// import React from 'react';
-
-
-// import HeaderPlayerPlayer from './HeaderPlayerPlayer';
-// import TrackDetails from './TrackDetails';
-// import SeekBar from './SeekBar';
-// import AlbumArt from './AlbumArt';
-// import Controls from './Controls';
-// import { View, StyleSheet } from 'react-native';
-
-
-
-
-
-// export default class MainPlayer extends React.Component {
-
-//     render() {
-//         return (
-//             <View style={styles.container}>
-//                 <HeaderPlayerPlayer message="Playing from Charts" />
-//                 <AlbumArt url="http://36.media.tumblr.com/14e9a12cd4dca7a3c3c4fe178b607d27/tumblr_nlott6SmIh1ta3rfmo1_1280.jpg" />
-//                 <TrackDetails title="Stressed Out"
-//                     artist="Twenty One Pilots" />
-//                 {/* <SeekBar trackLength={204} currentPosition={156} /> */}
-//                 <Controls />
-//             </View>
-//             // <MainContainer />
-//         );
-//     }
-// }
-
-
-// const styles = StyleSheet.create({
-//     container: {
-//         backgroundColor: 'green',
-//         flex: 1
-//     }
-// });
-
-
-
 import React, { Component } from 'react';
+// import Video from 'react-native-video'
 import {
     View,
     StatusBar,
@@ -117,8 +77,6 @@ export default class Player extends Component {
             }), 0);
         }
     }
-
-
 
     render() {
         const track = this.props.tracks[this.state.selectedTrack];

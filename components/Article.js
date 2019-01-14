@@ -132,7 +132,7 @@ export default class Articles extends React.Component {
                 <View style={{ flex: 1 }}>
                     <Menu action={this.props} showArrow={true} />
                     <Button onPress={() => {
-                        this.props.navigation.navigate('Player', { tracks: TRACKS })
+                        this.props.navigation.navigate('Loader',  { tracks:TRACKS, selectedTrack: 0 } )
                     }}>
                         <Text>
                             Ouvir
